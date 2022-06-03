@@ -1,0 +1,101 @@
+:root {
+    --primary-color: whitesmoke;
+    --secondary-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: medium;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo_title {
+    display: flex;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    font-size: 1cm;
+    color: var(--secundary-color);
+}
+
+.todo_list {
+    display: flex;
+    width: 100%;
+    flex-direction:inherit;
+    font-size: medium;
+}
+
+.todo_item{
+    display: flex;
+    width: 90%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px var(--secondary-color);
+}
+
+.todo_item > div {
+    display: inline;
+    width: 80%;
+    
+}
+.todo_item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.todo_item > input[type="button"],
+.todo_item > input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+.todo_item > input[type="checkbox"]:checked + div {
+    text-decoration: line-through;
+}
+
+.todo_new-item{
+    display: flex;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 50px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    margin: 10px;
+    font: inherit;
+}
+
+.todo_new-item > input{
+    background-color: var(--primary-color);
+    width: 80%;
+    outline: none;
+    font: inherit;
+    font-size: small;
+}
